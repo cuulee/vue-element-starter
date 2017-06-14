@@ -1,18 +1,18 @@
 <template>
-<div class="dimmer" :class="{active}" @click="closeDimmer">
+<div class="dimmer" :class="{active}" @click="closeSidebar">
 </div>
 </template>
 
 <script>
 export default {
-    name: 'Dimmer',
-    props:['active', 'closeDimmer']
+  name: 'Dimmer',
+  props: ['active', 'closeSidebar']
 }
 </script>
 
 <style lang="scss">
 .dimmer {
-    position: absolute;
+    position: fixed;
     top: 0!important;
     left: 0!important;
     text-align: center;
@@ -28,7 +28,6 @@ export default {
     width: 100%;
     height: 100%;
     display: none;
-    position: absolute;
     &.active {
         display: block!important;
         visibility: visible!important;
